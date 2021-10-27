@@ -23,6 +23,8 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self. updated_at = datetime.now()
+        models.storage.new(self)
+        models.stoarage.save()
 
     def __str__(self):
         """
@@ -36,6 +38,7 @@ class BaseModel:
         updates the updated at attribute when changes are made
         """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """
