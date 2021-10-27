@@ -1,36 +1,46 @@
 #!/usr/bin/python3
 """
+This is our file storage process
 """
 
-import models
+#import models
 import json
 
 
 class FileStorage:
     """
+    This class creates file storage objects
     """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
+        """
+        returns the objects attribute dict
+        """
         return self.__objects
 
     def new(self, obj):
+        """
+        creates a new dictionary item
+        """
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         self.__objects[key] = obj
 
     def save(self):
         """
+        creates json of objects attribute
         """
         new_objs = {}
 
         for key,  value in self.__objects.items():
             new_objs[key] = value.to_dict()
-        with open((self.__file_path), "w") as f:
+        with open((self.__file_path), "w", encoding="utf-8") as f:
             json.dump((new_objs), f)
 
     def reload(self):
         """
+        deserializes a json to a stored file
         """
         loaded_dictionary = {}
         try:

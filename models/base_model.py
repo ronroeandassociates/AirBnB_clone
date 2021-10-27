@@ -2,6 +2,7 @@
 """
 This module sets up the data for the base class for HBnB
 """
+#from models import storage
 import uuid
 from datetime import datetime
 
@@ -23,8 +24,8 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self. updated_at = datetime.now()
-        models.storage.new(self)
-        models.stoarage.save()
+        storage.new(self)
+        storage.save()
 
     def __str__(self):
         """
