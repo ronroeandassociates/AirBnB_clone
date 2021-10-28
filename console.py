@@ -26,15 +26,16 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         pass
 
-    def do_create(self, *args):
+    def do_create(self, args):
         """
         creates an object of class BaseModel
         usage: create BaseModel
         """
-        if args == BaseModel:
+        print(args)
+        if args == 'BaseModel':
             new_model = BaseModel()
             print("{}".format(new_model.id))
-        elif args == None:
+        elif not args:
             print("** class name missing **")
         else:
             print("** class doesn't exist **")
