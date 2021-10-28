@@ -3,7 +3,7 @@
 This is our file storage process
 """
 
-#import models
+import models
 import json
 
 
@@ -33,7 +33,7 @@ class FileStorage:
         """
         new_objs = {}
 
-        for key,  value in self.__objects.items():
+        for key, value in self.__objects.items():
             new_objs[key] = value.to_dict()
         with open((self.__file_path), "w", encoding="utf-8") as f:
             json.dump((new_objs), f)
