@@ -48,7 +48,7 @@ class FileStorage:
                 loaded_dictionary = json.load(f)
             for key, value in loaded_dictionary.items():
                 x = value.get("__class__")
-                if x in models.available_rooms:
-                    self.__objects[key] = models.available_rooms[x](**value)
+                if x in models.available_classes:
+                    self.__objects[key] = models.available_classes[x](**value)
         except FileNotFoundError:
             pass
