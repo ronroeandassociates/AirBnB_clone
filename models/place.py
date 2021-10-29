@@ -3,6 +3,8 @@ from models import BaseModel
 """
 Creates a place object
 """
+
+
 class place(BaseModel):
     """
     attributes of a place object
@@ -18,5 +20,3 @@ class place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_id = ""
-    def __init__(self, *args, **kwargs):
-        super().__init__(self)
