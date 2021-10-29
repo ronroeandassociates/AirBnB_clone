@@ -5,7 +5,7 @@ Creates a amenity object
 """
 
 
-class amenity(BaseModel):
+class Amenity(BaseModel):
     """
     attributes of an amenity object
     """

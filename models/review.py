@@ -5,7 +5,7 @@ Creates a review object
 """
 
 
-class review(BaseModel):
+class Review(BaseModel):
     """
     attributes of a review object
     """
