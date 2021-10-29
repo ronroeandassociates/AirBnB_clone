@@ -20,7 +20,7 @@ class test_user(unittest.TestCase):
 
     def test_user_instance_del(self):
         """
-        can be deleted 
+        can be deleted
         """
         inst_1_1 = User()
         del inst_1_1
@@ -69,7 +69,6 @@ class test_user(unittest.TestCase):
         """
         inst_7 = User()
         self.assertIsInstance(inst_7.last_name, str)
-
 
 
 if __name__ == '__main__':

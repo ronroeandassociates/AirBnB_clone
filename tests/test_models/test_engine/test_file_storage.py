@@ -20,11 +20,11 @@ class test_file_storage(unittest.TestCase):
         self.storage = FileStorage()
 
     def test_attrs(self):
-        """ 
+        """
         test for attributes
         """
         self.assertFalse(hasattr(self.storage, "mw.json"))
 
-    if "__main__" == __name__:
-        unittest.main()
 
+if "__name__" == __main__:
+        unittest.main()
