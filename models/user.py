@@ -5,6 +5,7 @@ Creates a user object
 """
 class User(BaseModel):
     """
+    all of the attributes of a user
     """
     email = ""
     password = ""
