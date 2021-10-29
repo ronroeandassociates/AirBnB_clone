@@ -35,7 +35,7 @@ class FileStorage:
 
         for key, value in self.__objects.items():
             new_objs[key] = value.to_dict()
-        with open((self.__file_path), "w", encoding="utf-8") as f:
+        with open((self.__file_path), 'w', encoding='utf-8') as f:
             json.dump((new_objs), f)
 
     def reload(self):
@@ -44,7 +44,7 @@ class FileStorage:
         """
         loaded_dictionary = {}
         try:
-            with open(self.__file_path, "r") as f:
+            with open(self.__file_path, 'r') as f:
                 loaded_dictionary = json.load(f)
             for key, value in loaded_dictionary.items():
                 x = value.get("__class__")
