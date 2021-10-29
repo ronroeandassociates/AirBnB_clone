@@ -23,7 +23,7 @@ class BaseModel:
 
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
-        self. updated_at = datetime.now()
+        self.updated_at = datetime.now()
         models.storage.new(self)
         models.storage.save()
 
@@ -45,8 +45,8 @@ class BaseModel:
         """
         creates the object as a dictionary
         """
-        my_dict = self.__dict__.copy()
-        my_dict['__class__'] = self.__class__.__name__
-        my_dict['created_at'] = self.created_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
-        my_dict['updated_at'] = self.updated_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
-        return my_dict
+        my_d = self.__dict__.copy()
+        my_d['__class__'] = self.__class__.__name__
+        my_d['created_at'] = self.created_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
+        my_d['updated_at'] = self.updated_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
+        return my_d
