@@ -130,6 +130,7 @@ class HBNBCommand(cmd.Cmd):
                     if i == "BaseModel.{}".format(show_split[1]):
                         stored_obj = stored_data.get(i)
                         setattr(stored_obj, show_split[2], show_split[3])
+                        models.storage.save()
                         return
                     else:
                         print("** no instance found **")
