@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+This is the file that initializes some items used in console
 """
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
