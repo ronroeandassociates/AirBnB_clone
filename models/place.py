@@ -5,7 +5,7 @@ Creates a place object
 """
 
 
-class place(BaseModel):
+class Place(BaseModel):
     """
     attributes of a place object
     """

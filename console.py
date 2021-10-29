@@ -6,6 +6,7 @@ import cmd
 from models.base_model import BaseModel
 import models
 
+
 class HBNBCommand(cmd.Cmd):
     """
     methods for the basic controls of the hbnb terminal app
@@ -32,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
         creates an object of class BaseModel
         usage: create BaseModel
         """
-        #print(args)
+
         if args in models.available_classes:
             new_model = models.available_classes[args]()
             print("{}".format(new_model.id))
@@ -55,9 +56,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             stored_key = "{}.{}".format(show_split[0], show_split[1])
-            #print(stored_key)
+
             stored_data = models.storage.all()
-            #print(stored_data)
+
             if stored_key in stored_data:
                 print(stored_data[stored_key])
             else:
@@ -77,9 +78,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             stored_data = models.storage.all()
-            #print(stored_data)
+
             for i in stored_data:
-                #print("i is: {}".format(i))
+
                 if i == "{}.{}".format(show_split[0], show_split[1]):
                     del stored_data[i]
                     models.storage.save()
@@ -126,14 +127,15 @@ class HBNBCommand(cmd.Cmd):
         if len(show_split) == 3:
             print("** value missing **")
         if len(show_split) == 4:
-                for i in stored_data:
-                    if i == "{}.{}".format(show_split[0], show_split[1]):
-                        stored_obj = stored_data.get(i)
-                        setattr(stored_obj, show_split[2], show_split[3])
-                        models.storage.save()
-                        return
-                    else:
-                        print("** no instance found **")
+            for i in stored_data:
+                if i == "{}.{}".format(show_split[0], show_split[1]):
+                    stored_obj = stored_data.get(i)
+                    setattr(stored_obj, show_split[2], show_split[3])
+                    models.storage.save()
+                    return
+                else:
+                    print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
