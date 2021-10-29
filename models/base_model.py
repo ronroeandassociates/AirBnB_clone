@@ -16,14 +16,14 @@ class BaseModel:
         """
         initialize some attributes
         """
-        if len(kwargs) > 0:
+        if kwargs is not None:
             for key, value in kwargs.items():
                 if "__class__" not in key:
                     setattr(self, key, value)
-        else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
+
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
         models.storage.new(self)
         models.storage.save()
 
