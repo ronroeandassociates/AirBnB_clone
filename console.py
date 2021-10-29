@@ -83,8 +83,56 @@ class HBNBCommand(cmd.Cmd):
                 if i == "BaseModel.{}".format(show_split[1]):
                     del stored_data[i]
                     models.storage.save()
+                    return
             print("** no instance found **")
             models.storage.save()
+
+    def do_all(self, args):
+        """
+        outputs all instances as strings
+        Usage: all
+               all BaseModel
+        """
+        show_split = args.split()
+        if len(show_split) >= 1:
+            if show_split[0] != "BaseModel":
+                print("** class doesn't exist **")
+            else:
+                for i in models.storage.all():
+                    print(i)
+        else:
+            for i in models.storage.all():
+                print(i)
+
+    def do_update(self, args):
+        """
+        updates the base model with new info
+        Usage: Update BaseModel <info>
+        """
+        show_split = args.split()
+        stored_data = models.storage.all()
+        if len(show_split) == 0:
+            print("** class name missing **")
+        if len(show_split) == 1:
+            if show_split[0] != "BaseModel":
+                print("** class doesn't exist **")
+            else:
+                print("** instance id missing **")
+        if len(show_split) == 2:
+            if show_split[0] != "BaseModel":
+                print("** class doesn't exist **")
+            else:
+                print("** attribute name missing **")
+        if len(show_split) == 3:
+            print("** value missing **")
+        if len(show_split) == 4:
+                for i in stored_data:
+                    if i == "BaseModel.{}".format(show_split[1]):
+                        stored_obj = stored_data.get(i)
+                        setattr(stored_obj, show_split[2], show_split[3])
+                        return
+                    else:
+                        print("** no instance found **")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
