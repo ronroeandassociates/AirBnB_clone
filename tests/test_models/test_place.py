@@ -82,10 +82,10 @@ class test_place(unittest.TestCase):
         inst_12 = Place()
         self.assertIsInstance(inst_12.longitude, float)
 
-    def test_amenity_ids_lst(self):
+    def test_amenity_id_lst(self):
         ''' test 'Place' type '''
         inst_13 = Place()
-        self.assertIsInstance(inst_13.amenity_ids, list)
+        self.assertIsInstance(inst_13.amenity_id, list)
 
 
 if __name__ == '__main__':
