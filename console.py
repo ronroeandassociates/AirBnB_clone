@@ -115,7 +115,7 @@ class HBNBCommand(cmd.Cmd):
         if class_name not in ['BaseModel', 'City', 'State',
                         'User', 'Review', 'Place',
                         'Ameinity']:
-            print(**class doesnt exist**)
+            print("**class doesnt exist**")
         if len(show_split) == 0:
             print("** class name missing **")
         if len(show_split) == 1:
