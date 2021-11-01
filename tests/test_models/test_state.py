@@ -37,8 +37,8 @@ class test_state(unittest.TestCase):
         """
         test save
         """
-        updated_state = inst_3.updated_at
         inst_3.save = State()
+        updated_state = inst_3.updated_at
         new_inst_3 = inst_3.updated_at
         self.assertNotEqual(updated_State, new_inst_3)
 

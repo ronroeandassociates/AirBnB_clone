@@ -7,7 +7,7 @@ from model.base_model import BaseModel
 from datetime import datetime
 
 
-class test_base_model(unittest.TestCase):
+class test_base_model(unittest.TestCase)
     """class BaseModel test"""
     def test_model_instance(self):
         """does it exist"""
@@ -40,7 +40,7 @@ class test_base_model(unittest.TestCase):
         inst_5_1 = BaseModel()
         updated_datetime = isnt_5_1.updated_at
         inst_5_1.save()
-        self.assertNotEqual(updated_datetiem, inst_5_1.updated_at)
+        self.assertNotEqual(updated_datetime, inst_5_1.updated_at)
 
     def test_class_instance(self):
         """ test class exists"""
