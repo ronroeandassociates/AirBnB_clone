@@ -8,25 +8,25 @@ from models.city import City
 
 
 class test_city(unittest.TestCase):
-    """ 
-    City Tests 
+    """
+    City Tests
     """
     def test_city(self):
         """ test
-         'City' exists 
-         """
+        'City' exists
+        """
         inst_1 = City()
         self.assertTrue(inst_1)
 
     def test_city_instance_del(self):
         """ 
-        test 'City' deletes 
+        test 'City' deletes
         """
         inst_1_1 = City()
         del inst_1_1
 
     def test_city_instance(self):
-        """ 
+        """
         test 'City' instance
         """
         inst_2 = City()
