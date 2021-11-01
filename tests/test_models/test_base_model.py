@@ -47,7 +47,7 @@ class test_base_model(unittest.TestCase):
         inst_6 = BaseModel()
         self.assertEqual((inst_6.__class__), BaseModel)
 
-def test_to_dict_instance(self):
+    def test_to_dict_instance(self):
         ''' test to_dict exists '''
         inst_8 = BaseModel()
         self.assertTrue(inst_8.to_dict())
