@@ -37,7 +37,7 @@ class test_base_model(unittest.TestCase):
 
     def test_save_updated_at(self):
         """test save update no match"""
-        inst _5_1 = BaseModel()
+        inst_5_1 = BaseModel()
         updated_datetime = isnt_5_1.updated_at
         inst_5_1.save()
         self.assertNotEqual(updated_datetiem, inst_5_1.updated_at)
@@ -64,7 +64,7 @@ class test_base_model(unittest.TestCase):
         inst_10_dict = inst_10.to_dict()
         self.assertIn('id', inst_10_dict)
 
-    def test_--str--_id(self):
+    def test__str__id(self):
         ''' test magic method '''
         inst_11 = BaseModel()
         inst_11_name = inst_11.__class__.__name__
