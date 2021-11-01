@@ -36,7 +36,7 @@ class test_amenity(unittest.TestCase):
         """
         test save
         """
-        inst_3.save = Amenity()
+        inst_3 = Amenity()
         updated_amenity = inst_3.updated_at
         new_inst_3 = inst_3.updated_at
         self.assertNotEqual(updated_amenity, new_inst_3)

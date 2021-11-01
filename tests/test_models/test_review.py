@@ -40,7 +40,7 @@ class test_Review(unittest.TestCase):
         test save
         """
 
-        inst_3.save = Review()
+        inst_3 = Review()
         updated_Review = inst_3.updated_at
         new_inst_3 = inst_3.updated_at
         self.assertNotEqual(updated_Review, new_inst_3)
