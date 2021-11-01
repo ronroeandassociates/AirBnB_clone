@@ -19,7 +19,7 @@ class test_city(unittest.TestCase):
         self.assertTrue(inst_1)
 
     def test_city_instance_del(self):
-        """ 
+        """
         test 'City' deletes
         """
         inst_1_1 = City()
