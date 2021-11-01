@@ -7,7 +7,7 @@ from model.base_model import BaseModel
 from datetime import datetime
 
 
-class test_base_model(unittest.TestCase)
+class test_base_model(unittest.TestCase):
     """class BaseModel test"""
     def test_model_instance(self):
         """does it exist"""
@@ -38,7 +38,7 @@ class test_base_model(unittest.TestCase)
     def test_save_updated_at(self):
         """test save update no match"""
         inst_5_1 = BaseModel()
-        updated_datetime = isnt_5_1.updated_at
+        updated_datetime = inst_5_1.updated_at
         inst_5_1.save()
         self.assertNotEqual(updated_datetime, inst_5_1.updated_at)
 

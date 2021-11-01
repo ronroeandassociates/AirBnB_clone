@@ -37,10 +37,10 @@ class test_state(unittest.TestCase):
         """
         test save
         """
-        inst_3.save = State()
+        inst_3 = State()
         updated_state = inst_3.updated_at
         new_inst_3 = inst_3.updated_at
-        self.assertNotEqual(updated_State, new_inst_3)
+        self.assertNotEqual(updated_state, new_inst_3)
 
     def test_name_str(self):
         """
