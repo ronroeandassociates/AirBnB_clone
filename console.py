@@ -112,10 +112,12 @@ class HBNBCommand(cmd.Cmd):
         """
         show_split = args.split()
         stored_data = models.storage.all()
+        """
         if class_name not in ['BaseModel', 'City', 'State',
                         'User', 'Review', 'Place',
                         'Ameinity']:
             print("**class doesnt exist**")
+        """
         if len(show_split) == 0:
             print("** class name missing **")
         if len(show_split) == 1:
