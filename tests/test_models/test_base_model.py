@@ -74,5 +74,6 @@ class test_base_model(unittest.TestCase):
         self.assertTrue(inst_11.id, str)
         self.assertTrue(inst_11.__dict__, dict)
 
+
 if __name__ == '__main__':
     unittest.main()

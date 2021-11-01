@@ -55,5 +55,6 @@ class test_city(unittest.TestCase):
         inst_5 = City()
         self.assertIsInstance(inst_5.state_id, str)
 
+
 if __name__ == '__main__':
     unittest.main()
