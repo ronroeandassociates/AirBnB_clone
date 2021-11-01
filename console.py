@@ -120,16 +120,14 @@ class HBNBCommand(cmd.Cmd):
         """
         if len(show_split) == 0:
             print("** class name missing **")
+        else:
+            if show_split[0] not in models.available_classes:
+                print("** class doesn't exist **")
+                return
         if len(show_split) == 1:
-            if show_split[0] not in models.available_classes:
-                print("** class doesn't exist **")
-            else:
-                print("** instance id missing **")
+            print("** instance id missing **")
         if len(show_split) == 2:
-            if show_split[0] not in models.available_classes:
-                print("** class doesn't exist **")
-            else:
-                print("** attribute name missing **")
+            print("** attribute name missing **")
         if len(show_split) == 3:
             print("** value missing **")
         if len(show_split) == 4:
