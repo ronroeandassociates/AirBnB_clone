@@ -21,8 +21,9 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - What is *args and how to use it
 - What is **kwargs and how to use it
 - How to handle named arguments in a function
-testing branching
+- testing branching
 
 ### Bugs and Issues
+
 some issues with Testing not getting all the marks
 program runs and hits all metrics except on test
