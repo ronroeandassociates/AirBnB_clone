@@ -1,4 +1,4 @@
-! [hbnb logo](https://github.com/ronroeandassociates/AirBnB_clone/blob/main/web_static/images/logo.png)
+![hbnb logo](/images/logo.png)
 
 # 0x01. AirBnB clone - Web static
 
