@@ -1,4 +1,5 @@
-![hbnb logo](AirBnB_clone/web_static/images/logo.png)
+! [hbnb logo](AirBnB_clone/web_static/images/logo.png)
+
 # AirBnB_clone
 
 ## Created by
