@@ -5,7 +5,7 @@ footer {
     border-top: 1px solid #cccccc;
     right: 0px;
     bottom: 0px;
-    left: 0px;
+    position: fixed;
     text-align: center;
-    /* line-height: 60px; */
+    line-height: 60px;
 }
