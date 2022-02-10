@@ -1,6 +1,6 @@
-![hbnb logo](/web_static/images/logo.png)
+![hbnb logo](https://github.com/ronroeandassociates/assets/blob/master/images/0x00_AirBnB_clone_banner.png)
 
-# AirBnB_clone
+# 0x00. AirBnB clone - The console
 
 ## Created by
 
@@ -9,19 +9,17 @@
 
 ## Learning Objectives
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-
-## General
+At the end of this project, you are expected to be able to `explain to anyone`, **without the help of Google**:
 
 - How to create a Python package
 - How to create a command interpreter in Python using the cmd module
 - What is Unit testing and how to implement it in a large project
 - How to serialize and deserialize a Class
 - How to write and read a JSON file
-- How to manage datetime
-- What is an UUID
-- What is *args and how to use it
-- What is **kwargs and how to use it
+- How to manage `datetime`
+- What is an `UUID`
+- What is `*args` and how to use it
+- What is `**kwargs` and how to use it
 - How to handle named arguments in a function
 - testing branching
 
