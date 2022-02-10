@@ -1,12 +1,11 @@
-![hbnb logo](/web_static/images/logo.png)
+![0x01. AirBnB clone - Web static](https://github.com/ronroeandassociates/assets/blob/master/images/0x01_airbnbclone_webstatic.png)
 
 # 0x01. AirBnB clone - Web static
 
-This is the beginning of building on the Front End
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+## Learning Objectives
 
-## General
+At the end of this project, you are expected to be able to `explain to anyone`, **without the help of Google**:
+
 - What is HTML
 - How to create an HTML page
 - What is a markup language
