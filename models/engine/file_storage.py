@@ -24,17 +24,15 @@ class FileStorage:
         """
         creates a new dictionary item
         """
-        key = "{}.{}".format(obj.__class__.__name__, obj.id)
+        key = f"{obj.__class__.__name__}.{obj.id}"
         self.__objects[key] = obj
 
     def save(self):
         """
         creates json of objects attribute
         """
-        new_objs = {}
+        new_objs = {key: value.to_dict() for key, value in self.__objects.items()}
 
-        for key, value in self.__objects.items():
-            new_objs[key] = value.to_dict()
         with open((self.__file_path), 'w', encoding='utf-8') as f:
             json.dump((new_objs), f)
 
