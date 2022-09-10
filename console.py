@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
 
         if args in models.available_classes:
             new_model = models.available_classes[args]()
-            print("{}".format(new_model.id))
+            print(f"{new_model.id}")
         elif not args:
             print("** class name missing **")
         else:
@@ -55,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
         elif show_split[0] not in models.available_classes:
             print("** class doesn't exist **")
         else:
-            stored_key = "{}.{}".format(show_split[0], show_split[1])
+            stored_key = f"{show_split[0]}.{show_split[1]}"
 
             stored_data = models.storage.all()
 
@@ -81,7 +81,7 @@ class HBNBCommand(cmd.Cmd):
 
             for i in stored_data:
 
-                if i == "{}.{}".format(show_split[0], show_split[1]):
+                if i == f"{show_split[0]}.{show_split[1]}":
                     del stored_data[i]
                     models.storage.save()
                     return
@@ -95,12 +95,8 @@ class HBNBCommand(cmd.Cmd):
                all BaseModel
         """
         show_split = args.split()
-        if len(show_split) >= 1:
-            if show_split[0] not in models.available_classes:
-                print("** class doesn't exist **")
-            else:
-                for i in models.storage.all():
-                    print(i)
+        if len(show_split) >= 1 and show_split[0] not in models.available_classes:
+            print("** class doesn't exist **")
         else:
             for i in models.storage.all():
                 print(i)
@@ -120,10 +116,9 @@ class HBNBCommand(cmd.Cmd):
         """
         if len(show_split) == 0:
             print("** class name missing **")
-        else:
-            if show_split[0] not in models.available_classes:
-                print("** class doesn't exist **")
-                return
+        elif show_split[0] not in models.available_classes:
+            print("** class doesn't exist **")
+            return
         if len(show_split) == 1:
             print("** instance id missing **")
         if len(show_split) == 2:
@@ -132,7 +127,7 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
         if len(show_split) == 4:
             for i in stored_data:
-                if i == "{}.{}".format(show_split[0], show_split[1]):
+                if i == f"{show_split[0]}.{show_split[1]}":
                     stored_obj = stored_data.get(i)
                     setattr(stored_obj, show_split[2], show_split[3])
                     models.storage.save()

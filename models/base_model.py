@@ -20,7 +20,7 @@ class BaseModel:
             for key, value in kwargs.items():
                 if "__class__" not in key:
                     setattr(self, key, value)
-                if key == "created_at" or key == "updated_at":
+                if key in ["created_at", "updated_at"]:
                     setattr(self, key,
                             datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f"))
         else:
@@ -34,8 +34,7 @@ class BaseModel:
         """
         outputs the attributes in string format
         """
-        return ("[{}] ({}) {}".format(self.__class__.__name__, self.id,
-                                      self.__dict__))
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         """
